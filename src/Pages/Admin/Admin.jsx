@@ -8,6 +8,7 @@ import {
   Form,
 } from "./AdminStyles";
 import Submit from "../../Components/Submit/Submit";
+import { loadInitialValues } from "../../Formik/initial-values";
 
 const Admin = () => {
   return (
@@ -15,11 +16,11 @@ const Admin = () => {
       <AdminTitle>¡Bienvenido!</AdminTitle>
       <CargaDatosStyled>
         <h2>Carga de planificacion</h2>
-        <Formik>
+        <Formik initialValues={loadInitialValues}>
           <Form>
             <InputCarga
               name="core"
-              htmlFor="coree"
+              htmlFor="core"
               type="text"
               id="core"
               placeholder="Core"
@@ -27,31 +28,40 @@ const Admin = () => {
               Core
             </InputCarga>
             <InputCarga
-              name="WeightLifting"
-              htmlFor="WeightLifting"
+              name="weightlifting"
+              htmlFor="weightlifting"
               type="text"
-              id="WeightLifting"
+              id="weightlifting"
               placeholder="WeightLifting"
             >
               WeightLifting
             </InputCarga>
             <InputCarga
-              name="Session"
-              htmlFor="Session"
+              name="session"
+              htmlFor="session"
               type="text"
-              id="Session"
+              id="session"
               placeholder="Session"
             >
               Session
             </InputCarga>
             <InputCarga
-              name="Wod"
-              htmlFor="Wod"
+              name="wod"
+              htmlFor="wod"
               type="text"
-              id="Wod"
+              id="wod"
               placeholder="Wod"
             >
               Wod
+            </InputCarga>
+            <InputCarga
+              name="wod"
+              htmlFor="wod"
+              type="text"
+              id="wod"
+              placeholder="Wod"
+            >
+              Accesesorios
             </InputCarga>
             <Submit>Cargar</Submit>
           </Form>

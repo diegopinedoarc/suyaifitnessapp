@@ -28,4 +28,5 @@ export const Form = styled(FormikForm)`
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 `;
