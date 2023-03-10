@@ -20,7 +20,6 @@ const Tabsplani = () => {
   return (
     <Wrapper>
       <div style={{ width: "100%" }}>
-        <h2>Planificación</h2>
         <Paper square>
           <Tabs
             variant="fullWidth"
