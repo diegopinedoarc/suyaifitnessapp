@@ -25,3 +25,55 @@ export const NavButton = styled(motion.button)`
   box-shadow: 2px 2px 6px 1px var(--negroheader);
   cursor: pointer;
 `;
+export const LinkContainerStyled = styled.div`
+  font-size: 1.2rem;
+  color: ${(props) => (props.home ? "#ff9d01" : "#ff9300")};
+`;
+
+export const LinksContainerStyled = styled.div`
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  a {
+    padding: 1rem 1.5rem;
+  }
+
+  a:first-child {
+    background: var(--orange-bg);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+`;
+export const UserContainerStyled = styled(LinkContainerStyled)`
+  display: flex;
+  align-items: center;
+`;
+export const UserNavStyled = styled.div`
+  gap: 15px;
+  cursor: pointer;
+  span {
+    color: white;
+    font-size: 1rem;
+    margin-right: 20px;
+  }
+`;
+
+export const UserImageStyled = styled.img`
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  cursor: pointer;
+`;
+
+export const SpanStyled = styled.span`
+  font-size: 1.5rem;
+  &:hover {
+    text-decoration: underline;
+  }
+`;

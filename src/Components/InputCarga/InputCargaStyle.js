@@ -6,7 +6,7 @@ export const InputBoxStyled = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 90%;
+  width: 50rem;
 `;
 
 export const InputLabelStyled = styled.label`
@@ -23,7 +23,8 @@ export const InputStyled = styled.input`
   outline: none;
   border: ${({ isError }) => (isError ? "1px solid #fb103d " : "none")};
   border-radius: 8px;
-  height: 30px;
+  height: 3rem;
+  text-align: center;
   padding: 0.5rem 1rem;
   color: white;
   width: 90%;

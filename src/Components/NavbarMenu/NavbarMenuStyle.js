@@ -8,7 +8,7 @@ export const NavbarWrapper = styled.nav`
   gap: 2.5rem;
   height: 100%;
   position: relative;
-  top: -10rem;
+  top: -6rem;
   & a {
     text-decoration: none;
     color: white;

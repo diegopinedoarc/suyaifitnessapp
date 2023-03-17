@@ -20,13 +20,14 @@ export const CargaDatosStyled = styled.div`
 
 export const Formik = styled(FormikContainer)`
   display: flex;
-  flex-wrap: wrap;
+
   flex-direction: column;
 `;
 export const Form = styled(FormikForm)`
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+
   justify-content: space-between;
   align-items: center;
 `;

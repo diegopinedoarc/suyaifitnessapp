@@ -37,7 +37,7 @@ const CartModal = () => {
                 className="close__modal "
                 whileTap={{ scale: 0.95 }}
               >
-                <h2>X</h2>
+                X
               </CloseButtonStyled>
             </CloseButtonContainerStyled>
             <NavbarMenu />

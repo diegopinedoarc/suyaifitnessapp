@@ -39,6 +39,15 @@ const NavbarMenu = () => {
       </motion.div>
       <motion.div whileTap={{ scale: 0.92 }}>
         <Link
+          to="./userlanding"
+          onClick={() => dispatch(menuActions.toggleHiddenMenu())}
+          isHidden={hiddenCart}
+        >
+          PlaniWeb
+        </Link>
+      </motion.div>
+      <motion.div whileTap={{ scale: 0.92 }}>
+        <Link
           to="./login"
           onClick={() => dispatch(menuActions.toggleHiddenMenu())}
           isHidden={hiddenCart}
