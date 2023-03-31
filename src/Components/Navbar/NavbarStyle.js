@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 export const NavbarWrapper = styled.nav`
   display: flex;
   align-items: center;
+  justify-content: end;
   width: 60%;
   gap: 1.5rem;
   & a {

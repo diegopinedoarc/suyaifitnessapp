@@ -6,10 +6,13 @@ export const LoginContainerStyled = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 2rem;
   margin-top: 20px;
 `;
-
+export const LoginInfo = styled.p`
+  text-align: center;
+  width: 80%;
+`;
 export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
@@ -39,7 +42,7 @@ export const LoginButtonGoogleStyled = styled.button`
   outline: none;
   border: none;
   border-radius: 1rem;
-  background: var(--gray-bg);
+  background: var(--blancotransp);
   color: white;
   cursor: pointer;
 `;

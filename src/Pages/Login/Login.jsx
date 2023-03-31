@@ -8,6 +8,7 @@ import {
   LoginContainerStyled,
   LoginPasswordStyled,
   LoginEmailStyled,
+  LoginInfo,
 } from "./LoginStyle";
 import Submit from "../../Components/Submit/Submit";
 import {
@@ -20,6 +21,7 @@ const Login = () => {
   return (
     <LoginContainerStyled>
       <h2>Iniciar Sesión</h2>
+      <LoginInfo>Usa tu cuenta de gmail para acceder a tu cuenta</LoginInfo>
       <Formik
         initialValues={loginInitialValues}
         validationSchema={loginValidationSchema}
@@ -38,7 +40,7 @@ const Login = () => {
         }}
       >
         <Form>
-          <LoginInput name="email" type="text" placeholder="Email" />
+          {/* <LoginInput name="email" type="text" placeholder="Email" />
           <LoginInput name="password" type="password" placeholder="Password" />
           <Link to="/forgot-password">
             <LoginPasswordStyled>
@@ -46,7 +48,7 @@ const Login = () => {
             </LoginPasswordStyled>
           </Link>
           <Submit>Ingresar</Submit>
-          <p>O podés ingresar con</p>
+          <p>O podés ingresar con</p> */}
           <LoginButtonGoogleStyled type="button" onClick={signInWithGoogle}>
             <img
               src="https://res.cloudinary.com/dcatzxqqf/image/upload/v1656648432/coding/NucbaZappi/Assets/google-icon_jgdcr1.png"
@@ -54,9 +56,9 @@ const Login = () => {
             />
             Google
           </LoginButtonGoogleStyled>
-          <Link to="/register">
+          {/* <Link to="/register">
             <LoginEmailStyled>¿No tenes cuenta? Crea una</LoginEmailStyled>
-          </Link>
+          </Link> */}
         </Form>
       </Formik>
     </LoginContainerStyled>

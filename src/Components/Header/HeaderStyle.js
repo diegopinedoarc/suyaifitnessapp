@@ -5,6 +5,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: row-reverse;
   /* border-radius: 0 0 0.6em 0.6rem; */
   background-color: var(--negroheader);
   /* box-shadow: 2px 2px 6px 1px var(--naranjasuyai); */

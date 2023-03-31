@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  EjContainer,
   EjDescript,
   EjTipe,
   EjTitle,
@@ -11,12 +12,17 @@ import Paper from "@mui/material/Paper";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import { useSelector } from "react-redux";
 
 const Tabsplani = () => {
+  const plani = useSelector((state) => state.plani.planis);
+  console.log(plani);
   const [tabIndex, setTabIndex] = useState(0);
   const handleTabChange = (event, newTabIndex) => {
     setTabIndex(newTabIndex);
   };
+  let { modulo1, modulo2, modulo3, modulo4, modulo5, modulo6 } = plani;
+  console.log(modulo1);
   return (
     <Wrapper>
       <div style={{ width: "100%" }}>
@@ -41,25 +47,45 @@ const Tabsplani = () => {
                   <EjTitleContainer>
                     <EjTitle>Core</EjTitle>
                   </EjTitleContainer>
-                  <EjTipe>4 sets</EjTipe>
-                  <EjDescript>
-                    30" PLANK BAJA - 30" PLANK ALTA - 30" PLANK IZQ - 30" PLANK
-                    DER - 30" REST
-                  </EjDescript>
+                  <EjTipe> {modulo1.rounds} </EjTipe>
+                  <EjContainer>
+                    <EjDescript>{modulo1.ejercicio1}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio2}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio3}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio4}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio5}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio6}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio7}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio8}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio9}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio10}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio11}</EjDescript>
+                    <EjDescript>{modulo1.ejercicio12}</EjDescript>
+                  </EjContainer>
                 </PlaniContainer>
                 <PlaniContainer>
                   <EjTitleContainer>
                     <EjTitle>WeightLifting</EjTitle>
                   </EjTitleContainer>
-                  <EjTipe>Back Squat</EjTipe>
-                  <EjDescript>
-                    1 SET X 5 REPS AL 75% - 1 SET X 3 REPS AL 85% - 1 SET X 1
-                    REPS O MÁS AL 95%
-                  </EjDescript>
+                  <EjTipe> {modulo2.ejercicio} </EjTipe>
+                  <EjDescript>{modulo2.set1}</EjDescript>
+                  <EjDescript>{modulo2.set2}</EjDescript>
+                  <EjDescript>{modulo2.set3}</EjDescript>
+                  <EjDescript>{modulo2.set4}</EjDescript>
+                  <EjDescript>{modulo2.set5}</EjDescript>
+                  <EjDescript>{modulo2.set6}</EjDescript>
+                  <EjDescript>{modulo2.set7}</EjDescript>
+                  <EjDescript>{modulo2.set8}</EjDescript>
+                  <EjDescript>{modulo2.set9}</EjDescript>
+                  <EjDescript>{modulo2.set10}</EjDescript>
+                  <EjDescript>{modulo2.set11}</EjDescript>
+                  <EjDescript>{modulo2.set12}</EjDescript>
+                  <EjDescript>{modulo2.set13}</EjDescript>
+                  <EjDescript>{modulo2.set14}</EjDescript>
                 </PlaniContainer>
                 <PlaniContainer>
                   <EjTitleContainer>
-                    <EjTitle>Clean Session</EjTitle>
+                    <EjTitle> {modulo3.ejercicio} </EjTitle>
                   </EjTitleContainer>
                   <EjTipe>OTM 12' Escalando</EjTipe>
                   <EjDescript>

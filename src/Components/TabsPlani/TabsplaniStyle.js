@@ -22,3 +22,7 @@ export const EjTitleContainer = styled.div`
 export const EjTitle = styled.h2``;
 export const EjDescript = styled.p``;
 export const EjTipe = styled.h3``;
+
+export const EjContainer = styled.div`
+  padding: 1rem;
+`;
