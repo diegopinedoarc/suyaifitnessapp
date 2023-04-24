@@ -31,49 +31,58 @@ const baseTheme = createTheme({
     },
   },
   typography: {
+    fontFamily: 'Open Sans',
     h1: {
       fontSize: '2rem',
       lineHeight: 1.2,
       fontWeight: 700,
+      color: '#fff',
     },
     h2: {
       fontSize: '1.5rem',
       lineHeight: 1.2,
       fontWeight: 700,
+      color: '#fff',
     },
     h3: {
       fontSize: '1.375rem',
       lineHeight: 1.4,
       fontWeight: 700,
+      color: '#fff',
     },
     h4: {
       fontSize: '1.125rem',
       lineHeight: 1.4,
       fontWeight: 600,
+      color: '#fff',
     },
     h5: {
       fontSize: '1rem',
       fontWeight: 500,
       lineHeight: 1.4,
       fontStyle: 'normal',
+      color: '#fff',
     },
     h6: {
       fontSize: '0.875rem',
       fontWeight: 400,
       lineHeight: 1.4,
       fontStyle: 'normal',
+      color: '#fff',
     },
     body1: {
       fontSize: '0.75rem',
       fontWeight: 400,
       lineHeight: 0.75,
       fontStyle: 'normal',
+      color: '#fff',
     },
     body2: {
       fontSize: '1rem',
       fontWeight: 400,
       lineHeight: '1.4rem',
       fontStyle: 'normal',
+      color: '#fff',
     },
   },
   shape: {
