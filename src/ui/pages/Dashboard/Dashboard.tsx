@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 import Button from 'ui/components/Button'
 import DashboardLayout from 'ui/Layouts/DashboardLayout'
@@ -9,7 +9,9 @@ export default function Dashboard() {
   return (
     <DashboardLayout>
       <Typography>Autenticate dashboard</Typography>
-      <Button onClick={logout}>logout</Button>
+      <Box sx={{ height: 300, justifyContent: 'center', alignContent: 'center', display: 'flex' }}>
+        <Button onClick={() => logout()}>logout</Button>
+      </Box>
     </DashboardLayout>
   )
 }

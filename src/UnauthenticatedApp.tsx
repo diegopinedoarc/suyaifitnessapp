@@ -31,8 +31,8 @@ function UnAuthanticatedApp() {
       }
     >
       <Routes>
-        <Route path="/" element={<LadingPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path={routes.root.path} element={<LadingPage />} />
+        <Route path={routes.login.path} element={<LoginPage />} />
       </Routes>
     </Suspense>
   )

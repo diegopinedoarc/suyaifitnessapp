@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from 'react'
-import { Form, FormikProvider, useFormik } from 'formik'
+import { FormikProvider, useFormik } from 'formik'
 import { Link } from 'react-router-dom'
 //import LoginInput from '../../Components/LoginInput/LoginInput'
 import LadingLayout from 'ui/Layouts/LadingLayout'
 import { LoginButtonGoogleStyled, LoginContainerStyled, FormStyled } from './Login.style'
 import { initialValues, LoginMessage, LoginErrorMessages } from './Login.utils'
-//import services from 'services/Firebase'
+import { signInUser } from 'services/Firebase/firebase-utils'
 import TextField from 'ui/components/Inputs/TextField'
 import PasswordInput from 'ui/components/Inputs/PasswordInput'
 import Button from 'ui/components/Button'
@@ -18,8 +18,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState('')
   const handleSubmit = useCallback(async (values) => {
     try {
-      console.log({ values })
-      //const response = await services.signInUser(values.email, values.password)
+      const response = await signInUser(values.email, values.password)
       // console.log({ response })
       login('1234')
     } catch (error) {

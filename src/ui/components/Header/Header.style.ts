@@ -4,7 +4,7 @@ import { appColors } from 'utils/colors'
 export const HeaderWrapper = styled(Box)(
   ({ theme }) => css`
     background-color: ${appColors.black};
-    height: 7rem;
+    height: ${theme.spacing(9)};
     width: 100%;
     display: flex;
     align-items: center;

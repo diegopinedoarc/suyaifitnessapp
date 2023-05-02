@@ -1,6 +1,7 @@
 import { Box, CircularProgress, Grid } from '@mui/material'
 import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import routes from 'routes'
 const DashboardPage = lazy(() => import('ui/pages/Dashboard'))
 
 export function RoutesLoader() {
@@ -22,7 +23,7 @@ export default function DashBoard() {
     <Box display="flex" alignItems="center" justifyContent="center" height="100%" width="100%">
       <Suspense fallback={<RoutesLoader />}>
         <Routes>
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path={routes.dashboard.path} element={<DashboardPage />} />
         </Routes>
       </Suspense>
     </Box>
