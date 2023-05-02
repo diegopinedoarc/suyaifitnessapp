@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react'
 import Header from 'ui/components/Header'
-import LadingLayout from 'ui/Layouts/LadingLayout'
-import Routes from 'routes'
-import Footer from 'ui/components/Footer'
 import { useDispatch } from 'react-redux'
-import { auth, createUserProfileDocument } from './Firebase/firebase-utils'
-import { onAuthStateChanged } from 'firebase/auth'
-import { onSnapshot } from 'firebase/firestore'
-import * as userActions from './Redux/user/user-actions'
+//import { auth, createUserProfileDocument } from './Firebase/firebase-utils'
+import AuthenticatedApp from 'AuthenticatedApp'
+import UnauthenticatedApp from 'UnauthenticatedApp'
+import { useAuth } from 'utils/hooks/useAuth'
+import { AppContainer } from 'App.style'
 
 // function onAuthStateChange(cb, action) {
 //   onAuthStateChanged(auth, async (userAuth) => {
@@ -23,16 +21,15 @@ import * as userActions from './Redux/user/user-actions'
 
 function App() {
   const dispatch = useDispatch()
-
+  const [isAuthenticated] = useAuth()
+  console.log({ isAuthenticated })
   // useEffect(() => {
   //   const unsuscribe = onAuthStateChange(dispatch, userActions.setCurrentUser)
   //   return () => unsuscribe()
   // }, [dispatch])
 
   return (
-    <LadingLayout>
-      <Routes />
-    </LadingLayout>
+    <AppContainer>{isAuthenticated ? <AuthenticatedApp /> : <UnauthenticatedApp />}</AppContainer>
   )
 }
 

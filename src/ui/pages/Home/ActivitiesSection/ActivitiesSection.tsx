@@ -6,8 +6,9 @@ import {
   StyledDescription,
   StyledOverlay,
 } from './ActivitiesSection.style'
-import { activitiesCollection } from './ActivitiesSection.utils'
+import { activitiesCollection, ActivitiesSectionMessage } from './ActivitiesSection.utils'
 import { Grid } from '@mui/material'
+import Button from 'ui/components/Button'
 
 export default function ActivitiesSection() {
   return (
@@ -17,6 +18,9 @@ export default function ActivitiesSection() {
           <ActivityCard $cardImage={img}>
             <StyledTitle variant="h2">{title}</StyledTitle>
             <StyledDescription>{description}</StyledDescription>
+            <Button sx={{ zIndex: 4 }} variant="contained">
+              {ActivitiesSectionMessage.ButtonLabel}
+            </Button>
             <StyledOverlay />
           </ActivityCard>
         </Grid>

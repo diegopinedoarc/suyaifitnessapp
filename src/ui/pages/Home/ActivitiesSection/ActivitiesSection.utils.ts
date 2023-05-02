@@ -1,3 +1,5 @@
+import ActivitiesSection from './ActivitiesSection'
+
 export const activitiesCollection = [
   {
     title: 'ENTRAMIENTO',
@@ -30,3 +32,7 @@ export const activitiesCollection = [
     columns: 6,
   },
 ]
+
+export enum ActivitiesSectionMessage {
+  ButtonLabel = 'Solicitar info',
+}

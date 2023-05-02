@@ -13,9 +13,8 @@ const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    userAuth(state, action: PayloadAction<UserData>) {
-      const { isAuth } = action.payload
-      state.isAuth = isAuth
+    userAuth(state, action: PayloadAction<boolean>) {
+      state.isAuth = action.payload
     },
   },
 })

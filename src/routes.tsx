@@ -1,28 +1,18 @@
-import { Routes as ReactDomRoutes, Route } from 'react-router-dom'
-import React, { lazy } from 'react'
-import Contact from 'ui/pages/Contact/Contact'
-import Login from 'ui/pages/Login/Login'
-import Register from 'ui/pages/Register/Register'
-import PageNotFound from 'ui/pages/PageNotFound/PageNotFound'
-import Benchmarks from 'ui/pages/Benchmarks/Benchmarks'
-import UserLanding from 'ui/pages/UserLanding/UserLanding'
-import Admin from 'ui/pages/Admin/Admin'
+import { Route, route } from 'static-route-paths'
 
-const LadingPage = lazy(() => import('ui/pages/Home'))
+// DOCS: https://github.com/NullVoxPopuli/static-route-paths
 
-const Routes = () => {
-  return (
-    <ReactDomRoutes>
-      <Route path="/" element={<LadingPage />} />
-      {/* <Route path="/contact" element={<Contact />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="*" element={<PageNotFound />} />
-      <Route path="/benchmarks" element={<Benchmarks />} />
-      <Route path="/userlanding" element={<UserLanding />} />
-      <Route path="/admin" element={<Admin />} /> */}
-    </ReactDomRoutes>
-  )
+export type QuickTransferRoute = Route & {
+  edit: Route & 'edit'
 }
 
-export default Routes
+const routes = route({
+  root: route(),
+  all: route('*'),
+  login: route('login'),
+  dashboard: route('dashboard'),
+})
+
+export const getAbsolutePath = (path: string) => (path[0] === '/' ? path : `/${path}`)
+
+export default routes
