@@ -22,7 +22,7 @@ export default function DashBoard() {
     <Box display="flex" alignItems="center" justifyContent="center" height="100%" width="100%">
       <Suspense fallback={<RoutesLoader />}>
         <Routes>
-          <Route path="/" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
       </Suspense>
     </Box>

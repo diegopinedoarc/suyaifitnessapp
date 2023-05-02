@@ -7,5 +7,6 @@ export const DashboardLayoutWrapper = styled(Box)(
     grid-template-rows: 80px 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    height: 100vh;
   `
 )

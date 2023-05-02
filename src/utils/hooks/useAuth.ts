@@ -24,8 +24,8 @@ export const useAuth = () => {
       login: (token: string) => {
         localStorage.setItem(authTokenKey, token)
         dispatch(userAuth(true))
+        navigate(routes.dashboard.path)
         if (state?.[OriginPathnameKey]) {
-          navigate(routes.dashboard.path)
         }
       },
       logout: () => {

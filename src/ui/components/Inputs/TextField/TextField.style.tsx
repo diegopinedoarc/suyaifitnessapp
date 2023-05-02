@@ -1,7 +1,6 @@
 import { TextField } from '@mui/material'
 import { css, styled } from '@mui/material/styles'
 import { transientProps } from 'utils/transientProps'
-import { appColors } from 'utils/colors'
 import type { TextFieldProps } from './TextField'
 
 export const StyledTextField = styled(
