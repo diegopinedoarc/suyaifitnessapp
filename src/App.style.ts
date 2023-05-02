@@ -3,13 +3,12 @@ import { appColors } from 'utils/colors'
 
 export const AppContainer = styled(Box)(
   ({ theme }) => css`
-    background-color: ${appColors.whiteSmoke};
-    height: 100vh;
-    width: 100vw;
+    background-color: ${appColors.black};
+    display: flex;
+    height: fit-content;
+    width: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    box-sizing: border-box;
   `
 )

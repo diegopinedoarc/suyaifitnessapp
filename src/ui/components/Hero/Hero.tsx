@@ -1,5 +1,6 @@
 import React from 'react'
-import { HeroButton, HeroImg, HeroInfo, HeroTitle, HeroWrapper } from './Hero.style'
+import { HeroInfo, HeroTitle, HeroWrapper } from './Hero.style'
+import Button from 'ui/components/Button'
 
 export type HeroProps = {
   title: string
@@ -10,10 +11,9 @@ export type HeroProps = {
 export default function Hero({ title, textButton, background }: HeroProps) {
   return (
     <HeroWrapper>
-      <HeroImg src={background} />
       <HeroInfo>
-        <HeroTitle>{title}</HeroTitle>
-        <HeroButton whileTap={{ scale: 0.95 }}>{textButton}</HeroButton>
+        <HeroTitle variant="h2">{title}</HeroTitle>
+        <Button variant="contained">{textButton}</Button>
       </HeroInfo>
     </HeroWrapper>
   )

@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux'
 //import * as menuActions from "../../Redux/menu/menu-actions";
 
 const NavbarMenu = () => {
-  const hiddenCart = useSelector((state) => state.menu.hidden)
   const dispatch = useDispatch()
   return (
     <NavbarWrapper>
@@ -14,7 +13,6 @@ const NavbarMenu = () => {
         <Link
           to="./"
           //onClick={() => dispatch(menuActions.toggleHiddenMenu())}
-          isHidden={hiddenCart}
         >
           Home
         </Link>
@@ -23,7 +21,6 @@ const NavbarMenu = () => {
         <Link
           to="./contact"
           //onClick={() => dispatch(menuActions.toggleHiddenMenu())}
-          isHidden={hiddenCart}
         >
           Contacto
         </Link>
@@ -32,7 +29,6 @@ const NavbarMenu = () => {
         <Link
           to="./benchmarks"
           //onClick={() => dispatch(menuActions.toggleHiddenMenu())}
-          isHidden={hiddenCart}
         >
           Benchmarks
         </Link>
@@ -41,7 +37,6 @@ const NavbarMenu = () => {
         <Link
           to="./userlanding"
           //onClick={() => dispatch(menuActions.toggleHiddenMenu())}
-          isHidden={hiddenCart}
         >
           PlaniWeb
         </Link>
@@ -50,7 +45,6 @@ const NavbarMenu = () => {
         <Link
           to="./login"
           //onClick={() => dispatch(menuActions.toggleHiddenMenu())}
-          isHidden={hiddenCart}
         >
           Login
         </Link>

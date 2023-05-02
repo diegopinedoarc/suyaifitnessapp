@@ -20,6 +20,7 @@ const baseTheme = createTheme({
     },
   },
   palette: {
+    mode: 'dark',
     primary: {
       main: appColors.primary,
     },
@@ -86,7 +87,7 @@ const baseTheme = createTheme({
     },
   },
   shape: {
-    borderRadius: 8,
+    borderRadius: 16,
   },
   spacing: (factor: number) => `${0.5 * factor}rem`,
   shadows,
